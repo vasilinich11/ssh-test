@@ -38,15 +38,15 @@ scp ~/ssh-test/testfile.txt student1@172.17.0.2:/home/student1/testfile_remote.t
 ## КЕЙС 4
 * Генерируем пару ключей
 ```bash
-ssh-keygen -t eG2559 -f -/.ssh/id_edG2559_sshtest -C "ssh-test"
+ssh-keygen -t e2559 -f -/.ssh/id_ed2559_sshtest -C "ssh-test"
 ```
 * Смотрим ключи
 ```bash
-ls -l -/.ssh/id_edG2559_sshtest*
+ls -l -/.ssh/id_ed2559_sshtest*
 ```
 * Копируем ключи на удаленный сервер 
 ```bash
-ssh-copy-id -i -/.ssh/id_edG2559_pub student1@172.17.0.2
+ssh-copy-id -i -/.ssh/id_ed2559_pub student1@172.17.0.2
 ```
 * Подключаемся без пароля
 ```bash
