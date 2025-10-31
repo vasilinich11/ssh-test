@@ -10,8 +10,17 @@ sudo apt install openssh-server
 ![IMAGE 2025-10-31 11:25:02 PM](https://github.com/user-attachments/assets/d6121085-78da-405a-aedf-84ab8889c96e)
 
 КЕЙС 3
+Создаем файл echo "hello from local" > ~/ssh-homework/testfile.txt
+Копируем на сервер scp ~/ssh-test/testfile.txt student1@172.17.0.2:/home/student1/testfile_remote.txt 
+На удаленном сервере
 ![IMAGE 2025-10-31 11:25:04 PM](https://github.com/user-attachments/assets/88e9dcc4-ef79-4c05-8bb1-edb4cd0f041b)
 
 КЕЙС 4
+Генерируем пару ключей ssh-keygen -t eG2559 -f -/.ssh/d_dG2559_sshtest -C "ssh-test"
+Смотрим ключи
+ls -l -/.ssh/d_dG2559_sshtest*
+Копируем ключи на удаленный сервер 
+ssh-copy-id -i -/.ssh/d_dG2559_pub student1@172.17.0.2
+Подключаемся без пароля ssh student1@172.17.0.2
 ![IMAGE 2025-10-31 11:25:05 PM](https://github.com/user-attachments/assets/9cf782ee-8d33-49ba-b480-c4ab42c74e20)
 
